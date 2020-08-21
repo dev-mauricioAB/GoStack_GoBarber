@@ -27,9 +27,10 @@ interface SingInCredentials {
 
 interface AuthContextData {
   user: IUser;
+  loading: boolean;
   singIn(credentials: SingInCredentials): Promise<void>;
   singOut(): void;
-  loading: boolean;
+  updateUser(user: IUser): Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -81,8 +82,22 @@ export const AuthProvider: React.FC = ({ children }) => {
     setData({} as AuthState);
   }, []);
 
+  const updateUser = useCallback(
+    async (user: IUser) => {
+      await AsyncStorage.setItem('@GoBarber:user', JSON.stringify(user));
+
+      setData({
+        token: data.token,
+        user,
+      });
+    },
+    [setData, data.token],
+  );
+
   return (
-    <AuthContext.Provider value={{ user: data.user, singIn, singOut, loading }}>
+    <AuthContext.Provider
+      value={{ user: data.user, loading, singIn, singOut, updateUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
