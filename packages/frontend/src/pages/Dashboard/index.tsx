@@ -141,7 +141,7 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Profile>
-            <img src={user.avatar_url} alt="Mauricio AB" />
+            <img src={user.avatar_url} alt={user.name} />
 
             <div>
               <span>Bem vindo,</span>

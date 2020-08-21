@@ -1,41 +1,41 @@
 /* eslint-disable camelcase */
-import React, { useCallback, useRef, ChangeEvent } from 'react'
-import { FiMail, FiLock, FiUser, FiCamera, FiArrowLeft } from 'react-icons/fi'
-import { FormHandles } from '@unform/core'
-import { Form } from '@unform/web'
-import * as Yup from 'yup'
-import { useHistory, Link } from 'react-router-dom'
-import api from '../../services/apiClient'
+import React, { useCallback, useRef, ChangeEvent } from 'react';
+import { FiMail, FiLock, FiUser, FiCamera, FiArrowLeft } from 'react-icons/fi';
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
+import * as Yup from 'yup';
+import { useHistory, Link } from 'react-router-dom';
+import api from '../../services/apiClient';
 
-import getValidationErrors from '../../utils/getValidationErrors'
+import getValidationErrors from '../../utils/getValidationErrors';
 
-import { useToast } from '../../hooks/toast'
+import { useToast } from '../../hooks/toast';
 
-import Input from '../../components/Input'
-import Button from '../../components/Button'
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
-import { Container, Content, AvatarInput } from './styles'
-import { useAuth } from '../../hooks/auth'
+import { Container, Content, AvatarInput } from './styles';
+import { useAuth } from '../../hooks/auth';
 
 interface ProfileFormData {
-  name: string
-  email: string
-  old_password: string
-  password: string
-  password_confirmation: string
+  name: string;
+  email: string;
+  old_password: string;
+  password: string;
+  password_confirmation: string;
 }
 
 const Profile: React.FC = () => {
-  const formRef = useRef<FormHandles>(null)
-  const { addToast } = useToast()
-  const history = useHistory()
+  const formRef = useRef<FormHandles>(null);
+  const { addToast } = useToast();
+  const history = useHistory();
 
-  const { user, updateUser } = useAuth()
+  const { user, updateUser } = useAuth();
 
   const handleSubmit = useCallback(
     async (data: ProfileFormData) => {
       try {
-        formRef.current?.setErrors({})
+        formRef.current?.setErrors({});
 
         const schema = Yup.object().shape({
           name: Yup.string().required('Nome obrigatório'),
@@ -55,11 +55,11 @@ const Profile: React.FC = () => {
               otherwise: Yup.string(),
             })
             .oneOf([Yup.ref('password'), undefined], 'Confirmação incorreta'),
-        })
+        });
 
         await schema.validate(data, {
           abortEarly: false,
-        })
+        });
 
         const {
           name,
@@ -67,38 +67,38 @@ const Profile: React.FC = () => {
           old_password,
           password,
           password_confirmation,
-        } = data
+        } = data;
 
         const formData = {
           name,
           email,
           ...(old_password
             ? {
-              old_password,
-              password,
-              password_confirmation,
-            }
+                old_password,
+                password,
+                password_confirmation,
+              }
             : {}),
-        }
+        };
 
-        const response = await api.put('/profile', formData)
+        const response = await api.put('/profile', formData);
 
-        updateUser(response.data)
+        updateUser(response.data);
 
-        history.push('/dashboard')
+        history.push('/dashboard');
 
         addToast({
           type: 'success',
           title: 'Perfil atualizado!',
           description: 'Suas infromações foram atualizadas!',
-        })
+        });
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
-          const errors = getValidationErrors(err)
+          const errors = getValidationErrors(err);
 
-          formRef.current?.setErrors(errors)
+          formRef.current?.setErrors(errors);
 
-          return
+          return;
         }
 
         addToast({
@@ -106,31 +106,31 @@ const Profile: React.FC = () => {
           title: 'Erro na atualização do perfil.',
           description:
             'Ocorreu um erro ao fazer as alterações. Tente novamente.',
-        })
+        });
       }
     },
     [addToast, history],
-  )
+  );
 
   const handleAvatarChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       if (e.target.files) {
-        const data = new FormData()
+        const data = new FormData();
 
-        data.append('avatar', e.target.files[0])
+        data.append('avatar', e.target.files[0]);
 
         api.patch('/users/avatar', data).then(response => {
-          updateUser(response.data)
+          updateUser(response.data);
 
           addToast({
             type: 'success',
             title: 'Avatar atualizado!',
-          })
-        })
+          });
+        });
       }
     },
     [addToast, updateUser],
-  )
+  );
 
   return (
     <Container>
@@ -189,7 +189,7 @@ const Profile: React.FC = () => {
         </Form>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

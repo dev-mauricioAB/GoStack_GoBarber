@@ -76,6 +76,7 @@ export const AuthProvider: React.FC = ({ children }) => {
     },
     [setData, data.token],
   );
+
   return (
     <AuthContext.Provider
       value={{ user: data.user, signIn, signOut, updateUser }}
