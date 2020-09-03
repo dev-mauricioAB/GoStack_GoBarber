@@ -78,7 +78,7 @@ export const Schedule = styled.div`
   }
 
   p {
-    margin-top> 8px;
+    margin-top: 8px;
     color: #ff9000;
     display: flex;
     align-items: center;
