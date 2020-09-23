@@ -13,13 +13,14 @@ import { Container, Error } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLElement> {
   name: string;
-  constainerStyle?: object;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  containerStyle?: object;
   icon?: React.ComponentType<IconBaseProps>;
 }
 
 const Input: React.FC<InputProps> = ({
   name,
-  constainerStyle = {},
+  containerStyle = {},
   icon: Icon,
   ...rest
 }) => {
@@ -50,10 +51,11 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <Container
-      style={constainerStyle}
+      style={containerStyle}
       isErrored={!!error}
       isFilled={isFilled}
       isFocused={isFocused}
+      data-testid="input-container"
     >
       {Icon && <Icon size={20} />}
       <input
