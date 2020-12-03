@@ -1,0 +1,12 @@
+{
+  "name": "goStack_monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces":{
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "MauricioAB <dev.mauricioalezandre@gmail.com>",
+  "license": "MIT"
+}
