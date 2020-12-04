@@ -81,7 +81,7 @@ Mobile
 
 ## 💻 Getting started
 
-<h3>API</h3></br>
+<h3>API</h3>
 Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
 
 ### Requirements
