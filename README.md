@@ -3,7 +3,7 @@
 </p>
 </br>
 <p align="center">
-  <img src="https://github.com/TulioCaz/gobarber-web-aplication/blob/master/src/assets/logo.svg?sanitize=true">
+  <h1>GoBarber</h1>
 </p>
 </br>
 
@@ -50,7 +50,7 @@ Frontend
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Router DOM](https://reacttraining.com/react-router/)
 - [React Icons](https://react-icons.netlify.com/#/)
-- [UnForm](https://unform.dev/) [💜](https://rocketseat.com.br/)
+- [UnForm](https://unform.dev/)
 - [Yup](https://github.com/jquense/yup)
 - [Styled Components](https://styled-components.com/)
 - [Polished](https://github.com/styled-components/polished)
@@ -68,7 +68,7 @@ Mobile
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
-- [UnForm](https://unform.dev/) [💜](https://rocketseat.com.br/)
+- [UnForm](https://unform.dev/) 
 - [Yup](https://github.com/jquense/yup)
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://github.com/axios/axios)
@@ -81,7 +81,7 @@ Mobile
 
 ## 💻 Getting started
 
-API
+<h3>API</h3></br>
 Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
 
 ### Requirements
@@ -129,7 +129,7 @@ $ yarn dev:server
 # Well done, project is started!
 ```
 
-Frontend
+<h3>Frontend</h3>
    
 ```bash
 # Install the dependencies
@@ -141,7 +141,7 @@ $ yarn
 $ yarn start
 ```
    
-Mobile
+<h3>Mobile</h3>
    
 ```bash
 # Install the dependencies
