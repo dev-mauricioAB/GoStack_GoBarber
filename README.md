@@ -20,6 +20,7 @@
 </p>
 
 ## 💇🏻‍♂️ About the project
+
 The gobarber project was developed during RocketSeat's GoStack course. The NodeJs, ReackJs, ReactNative and JavaScript stack were used.
 The main objective of the application is to unite service providers (Barbers and Hairdressers) with their customers in an organized manner.
 
@@ -27,7 +28,7 @@ The main objective of the application is to unite service providers (Barbers and
 
 Technologies that I used to develop this api
 
-<h3>API<\h3>
+API
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
@@ -44,7 +45,7 @@ Technologies that I used to develop this api
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
 
-<h3>Frontend<\h3>
+Frontend
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Router DOM](https://reacttraining.com/react-router/)
@@ -61,7 +62,7 @@ Technologies that I used to develop this api
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
 
-<h3>Mobile<\h3>
+Mobile
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Native](https://reactnative.dev/)
@@ -79,7 +80,8 @@ Technologies that I used to develop this api
 - [EditorConfig](https://editorconfig.org/)
 
 ## 💻 Getting started
-<h2>API<\h2>
+
+API
 Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
 
 ### Requirements
@@ -127,7 +129,7 @@ $ yarn dev:server
 # Well done, project is started!
 ```
 
-<h2>Frontend<\h2>
+Frontend
    
 ```bash
 # Install the dependencies
@@ -139,7 +141,7 @@ $ yarn
 $ yarn start
 ```
    
-<h2>Mobile<\h2>
+Mobile
    
 ```bash
 # Install the dependencies
