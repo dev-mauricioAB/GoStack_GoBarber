@@ -15,12 +15,12 @@
   <a href="#-license">License</a>
 </p>
 
-## 💇🏻‍♂️ About the project
+## :mega:About the project
 
 The gobarber project was developed during RocketSeat's GoStack course. The NodeJs, ReackJs, ReactNative and JavaScript stack were used.
 The main objective of the application is to unite service providers (Barbers and Hairdressers) with their customers in an organized manner.
 
-## 🚀 Technologies
+## :floppy_disk: Technologies
 
 Technologies that I used to develop this api
 
@@ -153,7 +153,7 @@ $ yarn android
 $ yarn ios
 ```
 
-## 🤔 How to contribute
+## :satellite: How to contribute
 
 **Make a fork of this repository**
 
@@ -190,6 +190,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Maurício Alexandre Barroso – [@YourLinkedin](https://www.linkedin.com/in/mauricioab-dev/) – dev.mauricioalezandre@gmail.com
-
-[https://github.com/dev-mauricioAB/GoStack_GoBarber](https://github.com/dbader/)
+Maurício Alexandre Barroso – [@mauricioab-dev](https://www.linkedin.com/in/mauricioab-dev/) – dev.mauricioalezandre@gmail.com
